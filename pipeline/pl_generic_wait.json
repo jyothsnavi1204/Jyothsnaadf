@@ -1,0 +1,53 @@
+{
+	"name": "pl_generic_wait",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 5
+				}
+			},
+			{
+				"name": "Execute Pipeline1",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "Pl_first_wait_one",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true,
+					"parameters": {
+						"w1": {
+							"value": "@pipeline().parameters.p1",
+							"type": "Expression"
+						},
+						"w2": {
+							"value": "@pipeline().parameters.p2",
+							"type": "Expression"
+						}
+					}
+				}
+			}
+		],
+		"parameters": {
+			"p1": {
+				"type": "int"
+			},
+			"p2": {
+				"type": "int"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-23T09:34:27Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

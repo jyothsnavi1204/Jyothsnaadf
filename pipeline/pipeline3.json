@@ -1,0 +1,76 @@
+{
+	"name": "pipeline3",
+	"properties": {
+		"activities": [
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			},
+			{
+				"name": "ChangeValForVariable",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "Wait1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "vString",
+					"value": "\"Testing\""
+				}
+			},
+			{
+				"name": "Append variable1",
+				"type": "AppendVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "vArray",
+					"value": "\"VIAG\""
+				}
+			}
+		],
+		"parameters": {
+			"p1": {
+				"type": "int"
+			}
+		},
+		"variables": {
+			"vString": {
+				"type": "String",
+				"defaultValue": "Dhana"
+			},
+			"vInt": {
+				"type": "Integer",
+				"defaultValue": 20
+			},
+			"vBool": {
+				"type": "Boolean",
+				"defaultValue": true
+			},
+			"vArray": {
+				"type": "Array",
+				"defaultValue": [
+					"Nani",
+					"dhana"
+				]
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-23T09:50:38Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

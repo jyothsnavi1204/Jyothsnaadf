@@ -1,0 +1,87 @@
+{
+	"name": "Switch_pl",
+	"properties": {
+		"activities": [
+			{
+				"name": "Switch1",
+				"type": "Switch",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"on": {
+						"value": "@pipeline().DataFactory",
+						"type": "Expression"
+					},
+					"cases": [
+						{
+							"value": "Dhana",
+							"activities": [
+								{
+									"name": "Wait2",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 4
+									}
+								}
+							]
+						},
+						{
+							"value": "lakshmi",
+							"activities": [
+								{
+									"name": "Wait3",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 6
+									}
+								}
+							]
+						},
+						{
+							"value": "Challarapu",
+							"activities": [
+								{
+									"name": "Wait4",
+									"type": "Wait",
+									"dependsOn": [],
+									"userProperties": [],
+									"typeProperties": {
+										"waitTimeInSeconds": 7
+									}
+								}
+							]
+						}
+					]
+				}
+			},
+			{
+				"name": "Wait1",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 4
+				}
+			}
+		],
+		"parameters": {
+			"p1": {
+				"type": "int",
+				"defaultValue": 5
+			}
+		},
+		"variables": {
+			"var": {
+				"type": "Integer",
+				"defaultValue": 5
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-23T10:25:32Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

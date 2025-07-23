@@ -1,0 +1,45 @@
+{
+	"name": "Pl_first_wait",
+	"properties": {
+		"activities": [
+			{
+				"name": "al_wait",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.w1",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "al_wait2",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.w1",
+						"type": "Expression"
+					}
+				}
+			}
+		],
+		"parameters": {
+			"w1": {
+				"type": "int",
+				"defaultValue": 12
+			}
+		},
+		"variables": {
+			"var": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-23T08:26:54Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

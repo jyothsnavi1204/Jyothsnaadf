@@ -1,0 +1,17 @@
+{
+	"name": "Jyothsnaadf",
+	"properties": {
+		"globalParameters": {
+			"wait_time": {
+				"type": "int",
+				"value": 10
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "a69faaf5-aae8-4ddd-bdce-02804bd2ed56",
+		"tenantId": "5a78d6db-28b1-4cab-8f62-e1db2532ba17"
+	}
+}

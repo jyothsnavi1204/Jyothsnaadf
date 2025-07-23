@@ -1,0 +1,88 @@
+{
+	"name": "Pl_wait_4",
+	"properties": {
+		"activities": [
+			{
+				"name": "al_wait",
+				"type": "Wait",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.w1",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Success_wait",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "al_wait",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": {
+						"value": "@pipeline().parameters.w2",
+						"type": "Expression"
+					}
+				}
+			},
+			{
+				"name": "Fail_wait",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "al_wait",
+						"dependencyConditions": [
+							"Failed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			},
+			{
+				"name": "Complete",
+				"type": "Wait",
+				"dependsOn": [
+					{
+						"activity": "al_wait",
+						"dependencyConditions": [
+							"Completed"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"waitTimeInSeconds": 1
+				}
+			}
+		],
+		"parameters": {
+			"w1": {
+				"type": "int",
+				"defaultValue": 12
+			},
+			"w2": {
+				"type": "int",
+				"defaultValue": 10
+			}
+		},
+		"variables": {
+			"var": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-07-23T09:23:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
