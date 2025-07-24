@@ -5,6 +5,15 @@
 		"factoryName": {
 			"value": "Jyothsnaadf"
 		},
+		"ls_adls_source_accountKey": {
+			"value": ""
+		},
+		"ls_blob_source_connectionString": {
+			"value": ""
+		},
+		"ls_adls_source_properties_typeProperties_url": {
+			"value": "https://jyothsnagen04.dfs.core.windows.net/"
+		},
 		"containerUri": {
 			"value": ""
 		},
