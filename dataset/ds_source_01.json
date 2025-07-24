@@ -1,0 +1,29 @@
+{
+	"name": "ds_source_01",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_source",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Top 50 SQL Interview Queries .pdf",
+				"folderPath": "FolderA",
+				"fileSystem": "jyogen"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "%PDF-1.7",
+				"type": "String"
+			}
+		]
+	}
+}
