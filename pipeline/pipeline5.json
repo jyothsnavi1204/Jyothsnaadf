@@ -1,6 +1,66 @@
 {
 	"name": "pipeline5",
 	"properties": {
+		"activities": [
+			{
+				"name": "Get Metadata1",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "AzureSqlTable2",
+						"type": "DatasetReference"
+					},
+					"fieldList": [
+						"columnCount"
+					]
+				}
+			},
+			{
+				"name": "Get Metadata2",
+				"type": "GetMetadata",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataset": {
+						"referenceName": "ds_sqldb_03_parm",
+						"type": "DatasetReference",
+						"parameters": {
+							"s1": "SalesLT",
+							"t1": "CustomerAddress"
+						}
+					},
+					"fieldList": [
+						"columnCount"
+					]
+				}
+			}
+		],
+		"parameters": {
+			"P1": {
+				"type": "string",
+				"defaultValue": "SalesLT"
+			},
+			"P2": {
+				"type": "string",
+				"defaultValue": "CustomerAddress"
+			}
+		},
 		"annotations": []
 	}
 }
