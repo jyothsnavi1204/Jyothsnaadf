@@ -5,11 +5,35 @@
 		"factoryName": {
 			"value": "Jyothsnaadf"
 		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_password": {
+			"value": ""
+		},
 		"ls_adls_source_accountKey": {
 			"value": ""
 		},
 		"ls_blob_source_connectionString": {
 			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "jyothsnaserv.database.windows.net"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "jyothsnadb"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "jyothsna"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_server": {
+			"value": "jyothsnaserv.database.windows.net"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_database": {
+			"value": "jyothsnadb"
+		},
+		"AzureSqlDatabase2_properties_typeProperties_userName": {
+			"value": "jyoadmin"
 		},
 		"ls_adls_source_properties_typeProperties_url": {
 			"value": "https://jyothsnagen04.dfs.core.windows.net/"
