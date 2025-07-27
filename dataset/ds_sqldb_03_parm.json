@@ -1,0 +1,30 @@
+{
+	"name": "ds_sqldb_03_parm",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase2",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"s1": {
+				"type": "string"
+			},
+			"t1": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": {
+				"value": "@dataset().s1",
+				"type": "Expression"
+			},
+			"table": {
+				"value": "@dataset().t1",
+				"type": "Expression"
+			}
+		}
+	}
+}
