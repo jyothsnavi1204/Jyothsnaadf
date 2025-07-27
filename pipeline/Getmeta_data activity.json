@@ -21,13 +21,15 @@
 					},
 					"fieldList": [
 						"exists",
-						"itemName",
+						"lastModified",
 						"itemType",
 						"lastModified",
-						"childItems"
+						"childItems",
+						"exists"
 					],
 					"storeSettings": {
 						"type": "AzureBlobFSReadSettings",
+						"recursive": true,
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -36,6 +38,17 @@
 				}
 			}
 		],
+		"parameters": {
+			"p1": {
+				"type": "int",
+				"defaultValue": 4
+			}
+		},
+		"variables": {
+			"coconut": {
+				"type": "Integer"
+			}
+		},
 		"annotations": []
 	}
 }
