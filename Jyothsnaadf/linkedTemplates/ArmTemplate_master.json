@@ -23,6 +23,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blob_source'"
 		},
+		"ls_copy_src_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_copy_src'"
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "jyothsnaserv.database.windows.net"
@@ -48,6 +52,10 @@
 			"defaultValue": "jyoadmin"
 		},
 		"ls_adls_source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jyothsnagen04.dfs.core.windows.net/"
+		},
+		"ls_copy_src_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://jyothsnagen04.dfs.core.windows.net/"
 		},
@@ -90,6 +98,9 @@
 					"ls_blob_source_connectionString": {
 						"value": "[parameters('ls_blob_source_connectionString')]"
 					},
+					"ls_copy_src_accountKey": {
+						"value": "[parameters('ls_copy_src_accountKey')]"
+					},
 					"AzureSqlDatabase1_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
 					},
@@ -110,6 +121,9 @@
 					},
 					"ls_adls_source_properties_typeProperties_url": {
 						"value": "[parameters('ls_adls_source_properties_typeProperties_url')]"
+					},
+					"ls_copy_src_properties_typeProperties_url": {
+						"value": "[parameters('ls_copy_src_properties_typeProperties_url')]"
 					}
 				}
 			},

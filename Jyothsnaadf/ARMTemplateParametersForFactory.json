@@ -17,6 +17,9 @@
 		"ls_blob_source_connectionString": {
 			"value": ""
 		},
+		"ls_copy_src_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "jyothsnaserv.database.windows.net"
 		},
@@ -36,6 +39,9 @@
 			"value": "jyoadmin"
 		},
 		"ls_adls_source_properties_typeProperties_url": {
+			"value": "https://jyothsnagen04.dfs.core.windows.net/"
+		},
+		"ls_copy_src_properties_typeProperties_url": {
 			"value": "https://jyothsnagen04.dfs.core.windows.net/"
 		}
 	}
