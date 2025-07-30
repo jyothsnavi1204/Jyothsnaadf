@@ -10,9 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "SQLQuery_1.sql",
-				"folderPath": "FolderA/Test",
-				"fileSystem": "jyogen"
+				"fileName": "India_data.csv",
+				"fileSystem": "input"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
