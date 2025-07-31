@@ -5,6 +5,9 @@
 		"factoryName": {
 			"value": "Jyothsnaadf"
 		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_password": {
 			"value": ""
 		},
@@ -19,6 +22,9 @@
 		},
 		"ls_copy_src_accountKey": {
 			"value": ""
+		},
+		"AzureDatabricks1_properties_typeProperties_existingClusterId": {
+			"value": "0723-161330-iscmx2gj"
 		},
 		"AzureSqlDatabase1_properties_typeProperties_server": {
 			"value": "jyothsnaserv.database.windows.net"
